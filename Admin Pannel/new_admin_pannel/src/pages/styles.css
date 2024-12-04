@@ -17,6 +17,7 @@ aside{
     color: black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
+    transition: 0.4s;
 }
 .logo_in_sidebar{
     width: 100%;
@@ -30,6 +31,7 @@ aside{
     flex-direction: column;
     margin-top: 40px;
     gap: 10px;
+    transition: 0.4s;
     /* background-color: red; */
 }
 #text-decoration{
@@ -46,6 +48,7 @@ aside{
     font-weight: 500;
     cursor: pointer;
     color: #717171;
+    transition: 0.3s;
 }
 .sidebar_link_card-selected{
     padding: 15px 30px;
@@ -75,13 +78,24 @@ main{
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
     padding: 10px 20px;
     font-weight: bold;
     color: #008CFF;
 }
+.menu_bars{
+    display: none;
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    background-color: black;
+}
+.navBar_Heading{
+    width: 90%;
+}
 #user_notify_icons_div{
-    width: 100px;
+    width: 10%;
+    min-width: 90px;
     display: flex;
     justify-content: space-between;
 }
@@ -143,9 +157,103 @@ main{
 }
 .inside_content_card div{
     display: flex;
-    gap: 20px;
+    gap: 10px;
+}
+.inside_content_card div div{
+    border-radius: 6px;
+    padding: 8px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.inside_content_card div div:hover{
+    background-color: #D9D9D9;
 }
 
+/* Courses Modal */
+.active-modal {
+    overflow-y: hidden;
+}
+.modal{
+    width: 100vw;
+    height: 100vh;
+    /* top: 0; */
+    left: 0;
+    right: 0;
+    /* bottom: 0; */
+    position: fixed;
+}
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+    cursor: no-drop;
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+}
+.modal-head{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.modal-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    /* background-color: blue; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: #a5a5a5 0px 0px 10px;
+}
+.modal-form div{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    /* background-color: red; */
+    padding: 5px 0px;
+}
+.modal-form div label{
+    display: block;
+}
+.input-field{
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    padding-left: 10px;
+    transition: 0.2s;
+    box-shadow: #8b8b8b 0px 0px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type='file']{
+    display: none; 
+}
+.input-field:focus{
+    outline: none;
+    box-shadow: #8b8b8b 0px 3px 8px;
+}
 /* buttons */
 
 .add-btn{
@@ -199,3 +307,153 @@ main{
 .delete-btn:active{
     background-color: #b60003;
 }
+
+
+/* CourseCategoryEdit Page */
+
+.edit_page_main_div{
+    /* background-color: black; */
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+}
+.eidt_image_section img{
+    height: 262px;
+    width: 100%;
+}
+.eidt_image_section{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+    gap: 10px;
+}
+.edit_content_section{
+    padding: 20px 0px;
+    width: 70%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: end;
+    gap: 30px;
+}
+#content-section{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* height: 400px; */
+    /* width: 100%; */
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+}
+.input_section{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: stretch;
+    gap: 15px;
+}
+.input_section input{
+    width: 50%;
+    border: none;
+    padding: 0px 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.input_section input:focus{
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.content_item{
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 4px 20px;
+    border-radius: 8px;
+    gap: 30px;
+}
+.content_item div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.content_item div div{
+    padding: 10px;
+    transition: 0.2s;
+}
+.content_item div div:hover{
+    background-color: #a7a7a7;
+}
+
+
+
+
+
+
+/* responsive */
+
+@media screen and (max-width: 1000px) {
+    body {
+      background-color: lightgreen;
+    }
+    .sidebar_link_card svg{
+        height: 20px;
+        width: 20px;
+    }
+    .logo_in_sidebar{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .sidebar_link_card{
+        gap: 5px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar_link_card-selected{
+        gap: 5px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-navbar{
+        
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .sidebar{
+        /* display: none; */
+        width: 80%;
+        z-index: 1000;
+    }
+    .sidebar_link_card{
+        gap: 20px;
+        justify-content: start;
+        flex-direction: row;
+        align-items: start;
+    }
+    .sidebar_link_card-selected{
+        gap: 20px;
+        justify-content: start;
+        flex-direction: row;
+        align-items: start;
+    }
+    .menu_bars{
+        display: block;
+        z-index: -1;
+    }
+    .main-navbar{
+        z-index: -1;
+    }
+  }

@@ -78,13 +78,18 @@ const Layout = () => {
             </div>
         </div>
         <div className='main-navbar'>
+            <div className="menu_bars">
+                
+            </div>
+            <div className='navBar_Heading'>
             {
                 sidebarItems.map((item, index)=>{
                     if(location.pathname===item.path){
-                        return item.name.toUpperCase();
+                        return <center>{item.name.toUpperCase()}</center>;
                     }
                 })
             }
+            </div>
             <div id='user_notify_icons_div'>
                 <div>
                 <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
