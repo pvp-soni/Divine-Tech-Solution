@@ -11,9 +11,9 @@ const Navbar = () => {
             <img src={Logo} alt="" height={66} width={66} />
         </div>
         <div className="links_section">
-            <NavLink to='/home' className="link">
+            <NavLink to='/' className="link">
                 Home
-                <svg className={location.pathname==='/home'?'link_active':"link_inactive"} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={location.pathname==='/'?'link_active':'link_inactive'} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 0H106L111 4H0L5 0Z" fill="#3EADAE"/>
                 </svg>
             </NavLink>
