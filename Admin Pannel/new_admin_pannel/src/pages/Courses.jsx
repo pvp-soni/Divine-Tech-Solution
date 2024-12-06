@@ -5,9 +5,13 @@ import { useState } from 'react';
 
 const Courses = () => {
   const navigate = useNavigate();
-  const [modal, setModal] = useState(false);
-  const toggleModal = () => {
-    setModal(!modal);
+  const [addCategoryModal, setAddCategoryModal] = useState(false);
+  const [addCourseModal, setAddCourseModal] = useState(false);
+  const toggleAddCategoryModal = () => {
+    setAddCategoryModal(!addCategoryModal);
+  }
+  const toggleAddCourseModal = () => {
+    setAddCourseModal(!addCourseModal);
   }
   const editCategoryPage = (id) => {
     navigate('/courses/'+id);
@@ -119,7 +123,7 @@ const Courses = () => {
       ]
     },
   ]
-  if(modal){
+  if(addCategoryModal){
     document.body.classList.add('active-modal')
   }
   else{
@@ -128,12 +132,44 @@ const Courses = () => {
   return (
     <>
     {
-      modal && (
+      addCategoryModal && (
         <div className='modal'>
-        <div className="overlay" onClick={toggleModal}></div>
+        <div className="overlay" onClick={toggleAddCategoryModal}></div>
           <div className="modal-content">
           <div className='modal-head'><h3>Add New Course Category</h3>
-          <svg style={{scale: '160%', cursor: 'pointer'}} onClick={toggleModal} width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg style={{scale: '160%', cursor: 'pointer'}} onClick={toggleAddCategoryModal} width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 1.25L1.5 7.75M1.5 1.25L8 7.75" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          </div>
+          <form action="" method="get" className='modal-form'>
+            <div>
+            <label htmlFor="">Course Category Name</label>
+            <input type='text' name="" id="" className='input-field' required/>
+            </div>
+            <div>
+            <label htmlFor="">Course Category Discription</label>
+            <input type="text" name="" id="" className='input-field' required/>
+            </div>
+            <div>
+            <label htmlFor="course-image" className='add-btn'>Upload Image*</label>
+            <input type="file" name="course-image" id="course-image" accept='image/*' required/>
+            </div>
+            <div className="div">
+              <input type="submit" value="Add" className='edit-btn'/>
+              <input type="reset" value="Clear" className='delete-btn' />
+            </div>
+          </form>
+          </div>
+        </div>
+      )
+    }
+    {
+      addCourseModal && (
+        <div className='modal'>
+        <div className="overlay" onClick={toggleAddCategoryModal}></div>
+          <div className="modal-content">
+          <div className='modal-head'><h3>Add New Course Category</h3>
+          <svg style={{scale: '160%', cursor: 'pointer'}} onClick={toggleAddCategoryModal} width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 1.25L1.5 7.75M1.5 1.25L8 7.75" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           </div>
@@ -161,7 +197,7 @@ const Courses = () => {
     }
     
     <div className='inline-display'>
-      <button className='add-btn' onClick={toggleModal}>
+      <button className='add-btn' onClick={toggleAddCategoryModal}>
         Add New Category
       </button>
     </div>

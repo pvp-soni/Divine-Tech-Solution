@@ -3,19 +3,17 @@ import Courses from './Courses';
 
 const CourseCategoryEdit = () => {
     const contents = [
-        'PHP & Laravel',
-        'Software Engineering',
-        'Android',
-        'Java',
-        'Flutter',
-        'Python',
-        'Ios',
-        'Automation Testing',
-        'React JS',
-        'Graphic Designing',
-        'Web Designing',
-        'UIUX',
-        'Digital Marketing'
+        'Core PHP',
+        'HTML & HTML5',
+        'CSS & CSS3',
+        'Database Connectivity',
+        'Advance PHP',
+        'File Handling',
+        'MVC',
+        'Laravel Framework',
+        'Laravel Forms & Migration',
+        'Laravel Controllers & Routes',
+        'Application to industrial project'
       ];
   return (
     <>

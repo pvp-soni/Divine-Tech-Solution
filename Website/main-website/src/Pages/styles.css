@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--FS);
+}
+:root {
+    --FS-head: 'Fs Me Heavy';
+    --FS: 'Fs Me';
+}
+
+/* NavBar */
+
+.navbar{
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px;
+}
+.logo_section{
+
+}
+.links_section{
+    display: flex;
+    gap: 5px;
+}
+.link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+    color: black;
+}
+.link:hover{
+    font-weight: bold;
+    color: #3EADAE;
+}
+.link_active{
+    opacity: 1;
+}
+.link_inactive{
+    opacity: 0;
+}
