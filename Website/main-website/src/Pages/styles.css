@@ -22,6 +22,7 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px;
     backdrop-filter: blur(10px);
     z-index: 1000;
+    transition: 0.4s;
 }
 .logo_section{
 
@@ -46,12 +47,14 @@
 }
 .link_active{
     opacity: 1;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
 }
 .link_inactive{
     opacity: 0;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
 }
 
-/* HomePage */
+/* HomePage Main Section */
 
 .main_bg{
     height: 90vh;
@@ -61,7 +64,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 80px;
+    padding: 0px 80px 200px 80px;
 }
 .tag_line{
     text-align: left;
@@ -104,6 +107,98 @@
 .primary_btn:active{
     background-color: #0d888a;
 }
+
+/* who we are section */
+
+.quick_section{
+    position: absolute;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+    box-shadow: rgb(92, 92, 92) 0px 0px 10px;
+    width: 90%;
+    transform: translateY(-300px);
+    border-radius: 8px;
+}
+.quick_section_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    gap: 30px;
+}
+.quick_section_card_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--FS-head);
+    font-size: 20px;
+}
+.quick_section_card_2{
+    width: 70%;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.who-we-are-main{
+    width: 100%;
+    background-color: #3EADAE;
+    padding: 200px 0px 75px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+  .sub1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .sub-head{
+    font-size: 18px;
+    color: black;
+  }
+  .main-head{
+    font-size: 30px;
+    font-family: var(--FS-head);
+    color: white;
+  }
+  .sub-description{
+    color: white;
+    font-size: 18px;
+    width: 50%;
+    min-width: 550px;
+  }
+  .sub2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* trending it courses 1 */
+
+.main-explore{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 250px;
+  }
+  .explore-main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    width: 50%;
+    /* overflow: hidden; */
+  }
 
 /* trending courses section */
 
@@ -164,4 +259,53 @@
 .course_description{
     font-size: 16px;
     font-weight: lighter;
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar{
+        display: none;
+    }
+    .main_bg{
+        background-size: 100% 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .tag_line{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .sub_head{
+        font-size: 14px;
+    }
+    .main_head{
+        font-size: 38px;
+        font-weight: bold;
+    }
+    .side_image img{
+        height: 350px;
+        width: 350px;
+    }
+
+    .quick_section{
+        flex-direction: column;
+        transform: translateY(-240px);
+        gap: 30px;
+    }
+    .who-we-are-main{
+        height: 550px;
+        justify-content: end;
+        padding: 200px 0px 75px 0px;
+    }
+    .sub2{
+        background-color: red;
+        width: 50%;
+    }
+    .sub-description{
+        width: 500px;
+        background-color: blue;
+    }
 }

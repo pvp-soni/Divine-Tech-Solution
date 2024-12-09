@@ -47,10 +47,6 @@ const Home = () => {
         {/* Explore section  */}
 
         <div className="main-explore">
-
-
-
-
           <svg width="13" height="271" viewBox="0 0 13 271" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0L13 5V266L0 271V0Z" fill="#283956"/>
           </svg>

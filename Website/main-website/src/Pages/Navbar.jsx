@@ -19,31 +19,31 @@ const Navbar = () => {
             </NavLink>
             <NavLink to='/training' className="link">
                 Training
-                <svg className='down_border' width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={location.pathname==='/training'?'link_active':'link_inactive'} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 0H106L111 4H0L5 0Z" fill="#3EADAE"/>
                 </svg>
             </NavLink>
             <NavLink to='/services' className="link">
                 Services
-                <svg className='down_border' width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={location.pathname==='/services'?'link_active':'link_inactive'} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 0H106L111 4H0L5 0Z" fill="#3EADAE"/>
                 </svg>
             </NavLink>
             <NavLink to='/consultancy' className="link">
                 Consultancy
-                <svg className='down_border' width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={location.pathname==='/consultancy'?'link_active':'link_inactive'} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 0H106L111 4H0L5 0Z" fill="#3EADAE"/>
                 </svg>
             </NavLink>
             <NavLink to='/about-us' className="link">
                 About Us
-                <svg className='down_border' width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={location.pathname==='/about-us'?'link_active':'link_inactive'} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 0H106L111 4H0L5 0Z" fill="#3EADAE"/>
                 </svg>
             </NavLink>
             <NavLink to='/contact-us' className="link">
                 Contact Us
-                <svg className='down_border' width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={location.pathname==='/contact-us'?'link_active':'link_inactive'} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 0H106L111 4H0L5 0Z" fill="#3EADAE"/>
                 </svg>
             </NavLink>
