@@ -1,7 +1,120 @@
 import React from 'react'
 import Courses from './Courses';
+import { useParams } from 'react-router-dom';
 
 const CourseCategoryEdit = () => {
+    const courseCategoryId = useParams()
+    const editDescription = () => {
+
+    }
+    const coursesCategories = [
+        {
+          id: 1,
+          name: 'Short-Term Courses',
+          items: [
+            'Core PHP',
+            'HTML & HTML5',
+            'CSS & CSS3',
+            'Database Connectivity',
+            'Advance PHP',
+            'File Handling',
+            'MVC',
+            'Laravel Framework',
+            'Laravel Forms & Migration',
+            'Laravel Controllers & Routes',
+            'Application to industrial project'
+          ],
+          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+        },
+        {
+          id: 2,
+          name: 'Mobile Application Development',
+          items: [
+            'Level 1',
+            'Level 2',
+            'Level 3',
+            'Level 4'
+          ],
+          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+        },
+        {
+          id: 3,
+          name: 'Software Testing & Automation',
+          items: [
+            'Module 1 - Software Testing',
+            'Module 2 - Web Automation Testing with Selenium',
+            'Module 3 - Mobile Automation Testing with Appium',
+            'Module 4 - API Testing with Postman'
+          ],
+          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+        },
+        {
+          id: 4,
+          name: 'Fullstack Development',
+          items: [
+            'Level 1',
+            'Level 2',
+            'Level 3',
+            'Level 4',
+            'Level 5',
+            'Level 6'
+          ],
+          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+        },
+        {
+          id: 5,
+          name: 'Backend Development',
+          items: [
+            'Level 1',
+            'Level 2',
+            'Level 3',
+            'Level 4',
+          ],
+          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+        },
+        {
+          id: 6,
+          name: 'Frontend Development',
+          items: [
+            'Level 1',
+            'Level 2',
+            'Level 3',
+            'Level 4',
+          ],
+          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+        },
+        {
+          id: 7,
+          name: 'MERN Stack Development',
+          items: [
+            'Level 1',
+            'Level 2',
+            'Level 3',
+            'Level 4',
+            'Level 5',
+            'Level 6'
+          ],
+          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+        },
+        {
+          id: 8,
+          name: 'Data Science & Analytics',
+          items: [
+            'Career In Data Science',
+            'Career In Data Anaytics'
+          ],
+          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+        },
+        {
+          id: 9,
+          name: 'Designing',
+          items: [
+            'Graphic Designing',
+            'UIUX Designing'
+          ],
+          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+        },
+      ]
     const contents = [
         'Core PHP',
         'HTML & HTML5',
@@ -18,9 +131,18 @@ const CourseCategoryEdit = () => {
   return (
     <>
     <div className='inline-display'>
+        {coursesCategories[courseCategoryId['id']-1].name}
       <button className='edit-btn'>
         Save
       </button>
+    </div>
+    <div className="course_category_edit_description">
+        <div>
+            <div>Description</div>
+            <div>{coursesCategories[courseCategoryId['id']-1].description}</div>
+        </div>
+        <button className='add-btn' onClick={editDescription(courseCategoryId['id']-1)}> Edit </button>
+        
     </div>
     <div className='edit_page_main_div'>
         <div className='eidt_image_section'>

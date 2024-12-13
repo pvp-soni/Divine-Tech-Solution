@@ -3,6 +3,7 @@ import './styles.css'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
+
 const Courses = () => {
   const navigate = useNavigate();
   const [addCategoryModal, setAddCategoryModal] = useState(false);
@@ -27,20 +28,19 @@ const Courses = () => {
       id: 1,
       name: 'Short-Term Courses',
       items: [
-        'PHP & Laravel',
-        'Software Engineering',
-        'Android',
-        'Java',
-        'Flutter',
-        'Python',
-        'Ios',
-        'Automation Testing',
-        'React JS',
-        'Graphic Designing',
-        'Web Designing',
-        'UIUX',
-        'Digital Marketing'
-      ]
+        'Core PHP',
+        'HTML & HTML5',
+        'CSS & CSS3',
+        'Database Connectivity',
+        'Advance PHP',
+        'File Handling',
+        'MVC',
+        'Laravel Framework',
+        'Laravel Forms & Migration',
+        'Laravel Controllers & Routes',
+        'Application to industrial project'
+      ],
+      description: 'Master in-demand skills with our quick, focused IT courses for career growth'
     },
     {
       id: 2,
@@ -50,7 +50,8 @@ const Courses = () => {
         'Level 2',
         'Level 3',
         'Level 4'
-      ]
+      ],
+      description: 'Master in-demand skills with our quick, focused IT courses for career growth'
     },
     {
       id: 3,
@@ -60,7 +61,8 @@ const Courses = () => {
         'Module 2 - Web Automation Testing with Selenium',
         'Module 3 - Mobile Automation Testing with Appium',
         'Module 4 - API Testing with Postman'
-      ]
+      ],
+      description: 'Master in-demand skills with our quick, focused IT courses for career growth'
     },
     {
       id: 4,
@@ -72,7 +74,8 @@ const Courses = () => {
         'Level 4',
         'Level 5',
         'Level 6'
-      ]
+      ],
+      description: 'Master in-demand skills with our quick, focused IT courses for career growth'
     },
     {
       id: 5,
@@ -82,7 +85,8 @@ const Courses = () => {
         'Level 2',
         'Level 3',
         'Level 4',
-      ]
+      ],
+      description: 'Master in-demand skills with our quick, focused IT courses for career growth'
     },
     {
       id: 6,
@@ -92,7 +96,8 @@ const Courses = () => {
         'Level 2',
         'Level 3',
         'Level 4',
-      ]
+      ],
+      description: 'Master in-demand skills with our quick, focused IT courses for career growth'
     },
     {
       id: 7,
@@ -104,7 +109,8 @@ const Courses = () => {
         'Level 4',
         'Level 5',
         'Level 6'
-      ]
+      ],
+      description: 'Master in-demand skills with our quick, focused IT courses for career growth'
     },
     {
       id: 8,
@@ -112,7 +118,8 @@ const Courses = () => {
       items: [
         'Career In Data Science',
         'Career In Data Anaytics'
-      ]
+      ],
+      description: 'Master in-demand skills with our quick, focused IT courses for career growth'
     },
     {
       id: 9,
@@ -120,7 +127,8 @@ const Courses = () => {
       items: [
         'Graphic Designing',
         'UIUX Designing'
-      ]
+      ],
+      description: 'Master in-demand skills with our quick, focused IT courses for career growth'
     },
   ]
   if(addCategoryModal){
@@ -211,7 +219,7 @@ const Courses = () => {
             {item.name}
           <div>
           <button className='add-btn'> Add Course </button>
-          <button className='edit-btn'> Edit Category </button>
+          <button className='edit-btn' onClick={()=>{editCategoryPage(item.id)}}> Edit Category </button>
           <button className='delete-btn'> Delete Category </button>
           </div>
           </div>
@@ -219,7 +227,7 @@ const Courses = () => {
             {
               item.items.map((content, index)=>{
                 return(
-                  <div className='inside_content_card'>{content}<div><div>{delete_svg}</div><div onClick={()=>{editCategoryPage(item.id)}}>{edit_svg}</div></div></div>
+                  <div className='inside_content_card'>{content}<div><div>{delete_svg}</div><div>{edit_svg}</div></div></div>
                 )
               })
             }

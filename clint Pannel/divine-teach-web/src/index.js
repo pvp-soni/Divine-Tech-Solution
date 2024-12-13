@@ -13,8 +13,8 @@ root.render(
   <>
   
    {/* <Navbar/> */}
-   {/* <Home /> */}
-   <Train />
+   <Home />
+   {/* <Train /> */}
    
 
   </>

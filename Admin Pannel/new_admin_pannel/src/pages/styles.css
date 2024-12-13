@@ -120,9 +120,13 @@ main{
 /* courses */
 .inline-display{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
     /* background-color: black; */
     padding: 15px 20px;
+    font-weight: bold;
+    font-size: 22px;
+    background-color: rgb(207, 207, 207);
 }
 .course-head-div{
     margin: 5px 0px;
@@ -318,6 +322,14 @@ input[type='file']{
     justify-content: space-between;
     gap: 30px;
     align-items: center;
+}
+.course_category_edit_description{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+.course_category_edit_description div div:nth-child(1){
+    font-weight: bold;
 }
 .eidt_image_section img{
     height: 262px;
