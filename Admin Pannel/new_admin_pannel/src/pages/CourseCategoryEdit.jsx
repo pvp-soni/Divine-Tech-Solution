@@ -1,12 +1,10 @@
 import React from 'react'
 import Courses from './Courses';
 import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 
 const CourseCategoryEdit = () => {
     const courseCategoryId = useParams()
-    const editDescription = () => {
-
-    }
     const coursesCategories = [
         {
           id: 1,
@@ -35,7 +33,7 @@ const CourseCategoryEdit = () => {
             'Level 3',
             'Level 4'
           ],
-          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+          description: 'Creating innovative and high-performance mobile applications tailored to your business needs'
         },
         {
           id: 3,
@@ -46,7 +44,7 @@ const CourseCategoryEdit = () => {
             'Module 3 - Mobile Automation Testing with Appium',
             'Module 4 - API Testing with Postman'
           ],
-          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+          description: 'Ensuring quality and efficiency with expert software testing and automation services'
         },
         {
           id: 4,
@@ -59,7 +57,7 @@ const CourseCategoryEdit = () => {
             'Level 5',
             'Level 6'
           ],
-          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+          description: 'Building robust, end-to-end solutions with expert full-stack development services'
         },
         {
           id: 5,
@@ -70,7 +68,7 @@ const CourseCategoryEdit = () => {
             'Level 3',
             'Level 4',
           ],
-          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+          description: 'Delivering scalable and efficient back-end solutions to power your applications'
         },
         {
           id: 6,
@@ -81,7 +79,7 @@ const CourseCategoryEdit = () => {
             'Level 3',
             'Level 4',
           ],
-          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+          description: 'Designing seamless and responsive front-end solutions for an exceptional user experience'
         },
         {
           id: 7,
@@ -94,7 +92,7 @@ const CourseCategoryEdit = () => {
             'Level 5',
             'Level 6'
           ],
-          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+          description: 'Building dynamic, scalable web applications with expert MERN stack development'
         },
         {
           id: 8,
@@ -103,7 +101,7 @@ const CourseCategoryEdit = () => {
             'Career In Data Science',
             'Career In Data Anaytics'
           ],
-          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+          description: 'Unlocking insights and driving data-driven decisions with expert data science and analytics services'
         },
         {
           id: 9,
@@ -112,7 +110,7 @@ const CourseCategoryEdit = () => {
             'Graphic Designing',
             'UIUX Designing'
           ],
-          description: 'Master in-demand skills with our quick, focused IT courses for career growth'
+          description: 'Creating visually captivating and user-centered designs to enhance your brand\'s impact'
         },
       ]
     const contents = [
@@ -141,7 +139,7 @@ const CourseCategoryEdit = () => {
             <div>Description</div>
             <div>{coursesCategories[courseCategoryId['id']-1].description}</div>
         </div>
-        <button className='add-btn' onClick={editDescription(courseCategoryId['id']-1)}> Edit </button>
+        <button className='add-btn'> Edit </button>
         
     </div>
     <div className='edit_page_main_div'>
@@ -152,7 +150,7 @@ const CourseCategoryEdit = () => {
         <div className='edit_content_section'>
             <div id='content-section'>
                 {
-                    contents.map((item, index)=>{
+                    coursesCategories[courseCategoryId['id']-1].items.map((item, index)=>{
                         return (
                             <div className="content_item">
                                 {item}

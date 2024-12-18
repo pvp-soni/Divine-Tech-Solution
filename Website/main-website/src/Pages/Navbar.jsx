@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.css'
-import Logo from './divine_logo.png'
+import Logo from '../assets/divine_logo.png'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 const Navbar = () => {
   const location = useLocation();
@@ -8,44 +8,33 @@ const Navbar = () => {
     <>
     <div className="navbar">
         <div className="logo_section">
-            <img src={Logo} alt="" height={66} width={66} />
+            <img src={Logo} alt="" />
+            DivinetechSolutions
         </div>
         <div className="links_section">
-            <NavLink to='/' className="link">
+            <NavLink to='/' className={location.pathname==='/'?'link_active link':'link'}>
                 Home
-                <svg className={location.pathname==='/'?'link_active':'link_inactive'} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 0H106L111 4H0L5 0Z" fill="#3EADAE"/>
-                </svg>
+                <div className="upper_line"></div>
             </NavLink>
-            <NavLink to='/training' className="link">
+            <NavLink to='/training' className={location.pathname==='/training'?'link_active link':'link'}>
                 Training
-                <svg className={location.pathname==='/training'?'link_active':'link_inactive'} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 0H106L111 4H0L5 0Z" fill="#3EADAE"/>
-                </svg>
+                <div className="upper_line"></div>
             </NavLink>
-            <NavLink to='/services' className="link">
+            <NavLink to='/services' className={location.pathname==='/services'?'link_active link':'link'}>
                 Services
-                <svg className={location.pathname==='/services'?'link_active':'link_inactive'} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 0H106L111 4H0L5 0Z" fill="#3EADAE"/>
-                </svg>
+                <div className="upper_line"></div>
             </NavLink>
-            <NavLink to='/consultancy' className="link">
+            <NavLink to='/consultancy' className={location.pathname==='/consultancy'?'link_active link':'link'}>
                 Consultancy
-                <svg className={location.pathname==='/consultancy'?'link_active':'link_inactive'} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 0H106L111 4H0L5 0Z" fill="#3EADAE"/>
-                </svg>
+                <div className="upper_line"></div>
             </NavLink>
-            <NavLink to='/about-us' className="link">
+            <NavLink to='/about-us' className={location.pathname==='/about-us'?'link_active link':'link'}>
                 About Us
-                <svg className={location.pathname==='/about-us'?'link_active':'link_inactive'} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 0H106L111 4H0L5 0Z" fill="#3EADAE"/>
-                </svg>
+                <div className="upper_line"></div>
             </NavLink>
-            <NavLink to='/contact-us' className="link">
+            <NavLink to='/contact-us' className={location.pathname==='/contact-us'?'link_active link':'link'}>
                 Contact Us
-                <svg className={location.pathname==='/contact-us'?'link_active':'link_inactive'} width="111" height="4" viewBox="0 0 111 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 0H106L111 4H0L5 0Z" fill="#3EADAE"/>
-                </svg>
+                <div className="upper_line"></div>
             </NavLink>
         </div>
     </div>
@@ -54,7 +43,7 @@ const Navbar = () => {
       <div className="footer_content">
          <div className="footer_logo_section">
           <div className="footer_logo_tagline">
-            <div><img src={Logo} alt="" height={66} width={66} /></div>
+            <div><img src={Logo} alt="" /></div>
             Your one-stop center for all technology solutions
           </div>
           <div className="footer_send_message">
