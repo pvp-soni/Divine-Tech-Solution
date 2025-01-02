@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-
+import ShortTime from './ShortTime';
 import reportWebVitals from './reportWebVitals';
 import Home from "./home"
 import ContactUs from './ContactUs';
@@ -15,9 +15,10 @@ root.render(
   <>
   
    {/* <Navbar/> */}
-   <Home />
+   {/* <Home /> */}
    {/* <Train /> */}
-   <ContactUs></ContactUs> 
+   {/* <ContactUs></ContactUs>  */}
+   <ShortTime />
 
   </>
  
