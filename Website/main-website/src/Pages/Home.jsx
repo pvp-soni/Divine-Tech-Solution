@@ -35,7 +35,6 @@ const Home = () => {
     <div className="main_container">
 
         {/* main section  */}
-
         <div className="main_bg">
         <div className="tag_line">
             <div>
@@ -49,10 +48,7 @@ const Home = () => {
                     Your one-stop center for all technology-related solutions and expert advice
                 </div>
             </div>
-            <button className='primary_btn'>Explore</button>
-        </div>
-        <div className="side_image">
-            <img src={Graphic1} alt="" height={488} width={488} />
+            <button className='primary_btn_white'>Explore</button>
         </div>
         </div>
 
@@ -63,7 +59,7 @@ const Home = () => {
             <div className="quick_section">
                 <div className="quick_section_card">
                     <div className="quick_section_card_1">
-                        <img src={itTrainingCenter} height={82} width={100} alt="" className='quick_section_icon'/>
+                        <div className="quick_section_icon"></div>
                         It Training Center
                     </div>
                     <div className="quick_section_card_2">
@@ -73,21 +69,21 @@ const Home = () => {
 
                 <div className="quick_section_card">
                     <div className="quick_section_card_1">
-                        <img src={mobileAppDevelopment} alt="" height={82} width={82}/>
-                        Mobile App Development
+                        <div className="quick_section_icon"></div>
+                        It Training Center
                     </div>
                     <div className="quick_section_card_2">
-                    Mobile and cross-platform application development training for corporations and individuals
-                    </div>
+                        Foundational training in programming languages and web design & development    
+                    </div>                    
                 </div>
                 <div className="quick_section_card">
                     <div className="quick_section_card_1">
-                        <img src={webDesignServices} height={82} width={82} alt="" />
-                        Web Design Services
+                        <div className="quick_section_icon"></div>
+                        It Training Center
                     </div>
                     <div className="quick_section_card_2">
-                    Crafting responsive, user-friendly websites with modern web technologies
-                    </div>
+                        Foundational training in programming languages and web design & development    
+                    </div>                    
                 </div>
             </div>
         <div className="sub1">

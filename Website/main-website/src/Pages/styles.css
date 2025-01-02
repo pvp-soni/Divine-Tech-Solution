@@ -6,34 +6,59 @@
 :root {
     --FS-head: 'Fs Me Heavy';
     --FS: 'Fs Me';
+<<<<<<< HEAD
     --C1: #FEFFEBB2;
     --C2: #550000;
     --c3: #FFD700;
+=======
+    --c1: #C8A2C8;
+    --c2: #AA0144;
+    --c3: #550000;
+    --c4: #FEFFEB;
+    --c5: #FFD700;
+>>>>>>> bd3ee200c334f995fefec3bf46bfd276eaa8d108
 }
 
 /* NavBar */
 
 .navbar{
+<<<<<<< HEAD
     background-color: var(--C1);
+=======
+    background-color: rgba(254, 255, 235, 0.63);
+>>>>>>> bd3ee200c334f995fefec3bf46bfd276eaa8d108
     position: sticky;
     top: 0px;
     /* width: 100%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     padding: 10px 50px;
     box-shadow: rgba(0, 0, 0, 0.2) 0p;
+=======
+    padding: 20px 50px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px;
+>>>>>>> bd3ee200c334f995fefec3bf46bfd276eaa8d108
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: 0.4s;
     
 }
+.logo_section img{
+    height: 40px;
+}
 .logo_section{
-
+    font-family: var(--FS-head);
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--c3);
 }
 .links_section{
     display: flex;
-    gap: 5px;
+    /* gap: 5px; */
 }
 .link{
     display: flex;
@@ -43,26 +68,41 @@
     cursor: pointer;
     transition: 0.2s;
     text-decoration: none;
+<<<<<<< HEAD
     color: var(--C2);
 }
 .link:hover{
     font-weight: bold;
+=======
+    color: black;
+    /* background-color: #0d888a; */
+    padding: 0px 20px;
+    overflow: hidden;
+}
+.upper_line{
+    height: 5px;
+    width: 200%;
+    background-color: var(--c5);
+    transform: translateX(-200px);
+    transition: 0.5s;
+}
+.link:hover .upper_line{
+    transform: translateX(0px);
+}
+.link:hover{
+>>>>>>> bd3ee200c334f995fefec3bf46bfd276eaa8d108
     color: var(--c3);
 }
 .link_active{
-    opacity: 1;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
-}
-.link_inactive{
-    opacity: 0;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
+    font-weight: bolder;
+    color: var(--c3);
 }
 
 /* footer  */
 
 .footer{
     display: flex;
-    background-color: #283956;
+    background-color: var(--c3);
     color: white;
     flex-direction: column;
     height: 450px;
@@ -94,7 +134,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    border-radius: 8px;
+}
+.footer_logo_tagline div img{
+    height: 40px;
+    padding: 15px;
 }
 .send_message_form{
     display: flex;
@@ -185,20 +229,22 @@
 /* HomePage Main Section */
 
 .main_bg{
-    height: 90vh;
+    height: 50vh;
     /* width: 100%; */
     background-image: url('../assets/bg1.jpg');
     background-size: cover;
+    background-position: center;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 80px 200px 80px;
+    justify-content: center;
+    align-items: start;
+    padding: 100px 80px 200px 80px;
 }
 .tag_line{
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
+    align-items: center;
     gap: 45px;
 }
 .tag_line div{
@@ -208,32 +254,32 @@
 }
 .sub_head{
     font-size: 18px;
-    color: black;
-    opacity: 0.6;
+    color: white;
 }
 .main_head{
     font-family: var(--FS-head);
     font-size: 54px;
-    color: #283956;
+    color: white;
 }
-.primary_btn{
-    background-color: #3EADAE;
+.primary_btn_white{
+    background-color: white;
     font-size: 18px;
     border: none;
     padding: 10px 34px;
     border-radius: 5px;
     font-weight: 200;
-    color: white;
+    color: var(--c3);
     width: auto;
     max-width: 200px;
     cursor: pointer;
     transition: 0.3s;
 }
-.primary_btn:hover{
-    background-color: #4dd7da;
+.primary_btn_white:hover{
+    background-color: var(--c3);
+    color: white;
 }
-.primary_btn:active{
-    background-color: #0d888a;
+.primary_btn_white:active{
+    background-color: #880000;
 }
 .primary_btn_small{
     background-color: #3EADAE;
@@ -257,27 +303,42 @@
 
 .quick_section{
     position: absolute;
-    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0px;
-    box-shadow: rgb(92, 92, 92) 0px 0px 10px;
     width: 90%;
     transform: translateY(-300px);
-    border-radius: 8px;
-    transition: 0.3s;
-}
-#quick_section_icon{
     transition: 0.3s;
 }
 .quick_section_card{
+    box-shadow: rgb(92, 92, 92) 0px 0px 10px;
+    max-width: 370px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: red; */
+    background-color: white;
     gap: 30px;
+    padding: 20px 0px;
+}
+.quick_section_card:hover .quick_section_icon{
+    scale: 110%;
+    transform: rotate(10deg) translateY(-10px);
+}
+.quick_section_card:hover .quick_section_card_1{
+    color: var(--c3);
+}
+.quick_section_card:hover .quick_section_card_2{
+    opacity: 0.7;
+}
+.quick_section_icon{
+    background-image: url('../assets/brown_it_training.png');
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-position: center;
+    transition: all 300ms cubic-bezier(.47,1.64,.41,.8);
 }
 .quick_section_card_1{
     display: flex;
@@ -286,16 +347,19 @@
     align-items: center;
     font-family: var(--FS-head);
     font-size: 20px;
+    color: #55000069;
+    transition: 0.3s;
 }
 .quick_section_card_2{
     width: 70%;
     font-size: 16px;
-    color: rgba(0, 0, 0, 0.6);
+    opacity: 0.4;
+    transition: 0.3s;
 }
 
 .who-we-are-main{
     width: 100%;
-    background-color: #3EADAE;
+    background-color: var(--c4);
     padding: 200px 0px 75px 0px;
     display: flex;
     flex-direction: column;
@@ -303,32 +367,33 @@
     align-items: center;
     text-align: center;
     gap: 30px;
+    border-bottom: 3px solid var(--c3);
   }
-  .sub1{
+.sub1{
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  .sub-head{
+.sub-head{
     font-size: 18px;
-    color: black;
+    color: var(--c3);
   }
-  .main-head{
+.main-head{
     font-size: 30px;
     font-family: var(--FS-head);
-    color: white;
+    color: var(--c3);
   }
-  .sub-description{
-    color: white;
+.sub-description{
+    color: var(--c3);
     font-size: 18px;
     width: 50%;
     min-width: 550px;
   }
-  .sub2{
+.sub2{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
 /* trending it courses 1 */
 

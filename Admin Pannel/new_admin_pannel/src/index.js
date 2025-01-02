@@ -14,6 +14,7 @@ import Faqs from './pages/Faqs';
 import About_us from './pages/About-us';
 import CourseCategoryEdit from './pages/CourseCategoryEdit';
 import Login from './pages/Login';
+import GetCourseCategory from './getCourseCategory';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,6 +29,7 @@ root.render(
       <Route path='/feedback' element={<Feedback />} />
       <Route path='/faqs' element={<Faqs />} />
       <Route path='/about-us' element={<About_us />} />
+      <Route path='/app' element={<App />} />
       <Route path='/courses/:id' element={<CourseCategoryEdit />} />
     </Route>
   </Routes>

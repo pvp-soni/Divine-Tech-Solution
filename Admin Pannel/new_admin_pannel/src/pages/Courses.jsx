@@ -129,7 +129,7 @@ const Courses = () => {
         'UIUX Designing'
       ],
       description: 'Master in-demand skills with our quick, focused IT courses for career growth'
-    },
+    }
   ]
   if(addCategoryModal){
     document.body.classList.add('active-modal')
