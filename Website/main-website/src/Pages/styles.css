@@ -42,6 +42,7 @@
 }
 .links_section{
     display: flex;
+    padding-top: 10px;
     /* gap: 5px; */
 }
 .link{
@@ -459,7 +460,7 @@
 /* Consultancy Section  */
 
 .consultacy_section_main{
-    background-color: #283956;
+    background-color: var(--c3);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -497,6 +498,12 @@
     font-weight: lighter;
     font-size: 18px;
 }
+
+
+/* Customer Testimonial Section  */
+
+
+
 
 /* Training Page */
 

@@ -211,6 +211,17 @@ const Home = () => {
             <div className="consultancy_img"></div>
       
       </div>
+
+      {/* customer Testimonials section */}
+
+      <div className="customer_testimonial_main">
+        <div className="testimonial_image_div">
+
+        </div>
+        <div className="testimonial_carousel">
+            
+        </div>
+      </div>
     </div>
     
     </>
