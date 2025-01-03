@@ -1,0 +1,143 @@
+:root {
+    --FS-head: 'Fs Me Heavy';
+    --FS: 'Fs Me';
+    --FS-Light: 'fs light'
+  }
+  /* General Reset */
+  *{
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--FS);
+   }
+
+
+
+
+
+/* contact section 1 */
+.Bcontact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 80px;
+    gap: 80px;
+    background-color: white;
+}
+
+
+
+.Bcontact-section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Bcontact-title{
+    font-size: 55px;
+    font-family: var(--FS-head);
+    color: #3EADAE;
+}
+.Bcontact-subtitle{
+    opacity: 60%;
+}
+
+
+
+.Bcontact-sub-section2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Badd{
+    color: #3EADAE;
+    font-size: 18px;
+    font-family: var(--FS-head);
+}
+.Bsub-add{
+    opacity: 60%;
+}
+
+
+
+.Bcontact-sub-section3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Btime{
+    color: #3EADAE;
+    font-size: 18px;
+    font-family: var(--FS-head);
+}
+.Bsub-time{
+    opacity: 60%;
+}
+
+
+/* contactUs page section 2 */
+
+.Acontact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(192, 192, 192);
+    padding: 80px;
+    gap: 80px;
+
+}
+
+
+
+.Acontact-section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Acontact-title{
+    font-size: 55px;
+    font-family: var(--FS-head);
+    color: #3EADAE;
+}
+.Acontact-subtitle{
+    opacity: 60%;
+}
+
+
+
+.Acontact-sub-section2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Aadd{
+    color: #3EADAE;
+    font-size: 18px;
+    font-family: var(--FS-head);
+}
+.Asub-add{
+    opacity: 60%;
+}
+
+
+
+.Acontact-sub-section3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Atime{
+    color: #3EADAE;
+    font-size: 18px;
+    font-family: var(--FS-head);
+}
+.Asub-time{
+    opacity: 60%;
+}
+
+/* contact form in contactUs page */
+.Acontact-section-2{
+    
+}

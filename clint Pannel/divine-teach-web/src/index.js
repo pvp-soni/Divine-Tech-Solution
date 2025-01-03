@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-
+import ShortTime from './ShortTime';
 import reportWebVitals from './reportWebVitals';
+import Home from "./home"
+import ContactUs from './ContactUs';
 
-import Train from './Train.jsx';
+// import Train from './Train.jsx';
 
 
 
@@ -13,9 +15,10 @@ root.render(
   <>
   
    {/* <Navbar/> */}
-   <Home />
+   {/* <Home /> */}
    {/* <Train /> */}
-   
+   {/* <ContactUs></ContactUs>  */}
+   <ShortTime />
 
   </>
  
