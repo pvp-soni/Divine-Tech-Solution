@@ -184,12 +184,16 @@
     flex-direction: column;
     justify-content: start;
     gap: 20px;
-    width: 70%;
+    width: 100%;
 }
 .footer_contact_info div{
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     gap: 20px;
+}
+.footer_contact_info div svg{
+    margin-right: 20px;
+    height: 20px;
 }
 .footer_horizontal_line{
     width: 100%;
@@ -298,7 +302,7 @@
     align-items: center;
     background-color: white;
     gap: 30px;
-    padding: 20px 0px;
+    padding: 35px 0px;
 }
 .quick_section_card:hover .quick_section_icon{
     scale: 110%;
@@ -308,7 +312,7 @@
     color: var(--c3);
 }
 .quick_section_card:hover .quick_section_card_2{
-    opacity: 0.7;
+    opacity: 1;
 }
 .quick_section_icon{
     background-image: url('../assets/brown_it_training.png');
@@ -325,15 +329,37 @@
     align-items: center;
     font-family: var(--FS-head);
     font-size: 20px;
-    color: #55000069;
+    color:rgba(85, 0, 0, 0.71);
     transition: 0.3s;
 }
 .quick_section_card_2{
     width: 70%;
     font-size: 16px;
-    opacity: 0.4;
+    opacity: 0.7;
     transition: 0.3s;
 }
+.quick_section :hover img{
+    transition: 0.3s;
+    transform: rotate(-2deg) translateY(0) scale(1.2);
+    animation: bounce-rotate 0.7s 1;
+}
+@keyframes bounce-rotate {
+    0% {
+      transform: rotate(0deg) translateY(0) scale(1.2); /* Starting position */
+    }
+    25% {
+      transform: rotate(5deg) translateY(-30px) scale(1.2); /* Move up */
+    }
+    50% {
+      transform: rotate(10deg) translateY(0) scale(1.2); /* Back to start */
+    }
+    75% {
+      transform: rotate(-5deg) translateY(-10px) scale(1.2); /* Slight bounce */
+    }
+    100% {
+      transform: rotate(-2deg) translateY(0) scale(1.2); /* Back to start */
+    }
+  }
 
 .who-we-are-main{
     width: 100%;
@@ -535,11 +561,12 @@
     font-family: var(--FS);
     font-weight: 100;
     cursor: pointer;
+    color: var(--c5);
 }
 .navigations a{
     text-decoration: none;
     font-family: var(--FS);
-    color: white;
+    color: var(--c5);
     transition: 0.2s;
 }
 .navigations a:hover{
@@ -586,21 +613,22 @@
 
 .default_heading_section{
     width: 100%;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 40px 0px;
     gap: 20px;
+    text-align: center;
 }
 .default_heading{
     font-family: var(--FS-head);
-    color: #283956;
-    font-size: 55px;
+    color: var(--c3);
+    font-size: 50px;
 }
 .default_description{
-    font-size: 18px;
-    opacity: 0.6;
+    font-weight: 100;
 }
 
 /* all courses section */
@@ -640,6 +668,214 @@
 .all_course_card_description{
     font-weight: 100;
 }
+
+/* About Us Page  */
+
+.about_logo_section{
+    height: 440px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), var(--c4));
+    /* background-color: black; */
+}
+.about_logo_section_bg{
+    background-image: url('../assets/about_logo_bg.jpg');
+    height: 440px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+.about_logo_section_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 35px;
+}
+.about_ds_logo{
+    height: 160px;
+    width: 160px;
+    /* background-color: black; */
+    background-image: url('../assets/divine_logo.png');
+    background-size: 160px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.about_logo_section_heading{
+    font-family: var(--FS-head);
+    color: var(--c3);
+    font-size: 50px;
+}
+.about_logo_section_description{
+    opacity: 0.7;
+}
+.why_us_main{
+    transform: translateY(-60px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.why_us_card{
+    background-color: white;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.4);
+    width: 450px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: var(--FS-head);
+    color: var(--c3);
+    font-size: 20px;
+    gap: 10px;
+    padding: 3px 10px;
+    transition: 0.2s;
+}
+.why_us_card svg{
+    transform: translateY(5px);
+}
+#icon_transition{
+    transition: 0.2s;
+}
+.why_us_card:hover #icon_transition{
+    scale: 115%;
+}
+.why_us_card:hover path{
+    fill: white;
+}
+.why_us_card:hover{
+    background-color: var(--c1);
+    color: white;
+}
+.about_us_info_section{
+    padding: 40px 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.info_heading{
+    color: var(--c3);
+    font-family: var(--FS-head);
+    font-size: 34px;
+}
+.info_paragraphs{
+    font-weight: 100;
+    color: var(--c3);
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+.vision_mission_main_section{
+    padding: 50px 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.vision_mission_card{
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.4);
+    width: 500px;
+    padding: 50px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.vision_mission_card:hover{
+    background-color: var(--c1);
+    color: white;
+}
+.vision_mission_card:hover path{
+    fill: white;
+}
+.vision_mission_card:hover svg{
+    transform: scaleX(-1);
+}
+.vision_mission_card:hover .info_heading{
+    color: white;
+}
+.vision_mission_card:hover .info_paragraphs{
+    color: white;
+}
+#about_us_last_line{
+    padding: 0px 0px 100px 0px;
+    text-align: center;
+    color: var(--c3);
+    font-weight: 100;
+}
+
+/* Services Page */
+
+.service_card{
+    display: flex;
+    /* width: 100%; */
+    padding: 70px 40px;
+    background-color: #0d888a;
+    gap: 40px;
+    transition: 0.4s;
+}
+.service_img_and_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30%;
+    gap: 20px;
+}
+.service_img{
+    height: 300px;
+    width: 330px;
+    background-color: black;
+}
+.service_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 7px;
+}
+.service_name_heading{
+    font-family: var(--FS-head);
+    color: var(--c3);
+    font-size: 26px;
+}
+.service_name_description{
+    font-weight: 100;
+}
+.service_card_details{
+    background-color: #E7E7E7;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+    transition: 0.4s;
+}
+.service_card_animation_div{
+    background-color: red;
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    float: right;
+    right: 40px;
+
+}
+/* .service_card:hover{
+    background-color: var(--c1);
+}
+.service_card:hover .service_card_details{
+    border-radius: 0px;
+    background-color: var(--c1);
+} */
+
+
+
 
 @media screen and (max-width: 600px) {
     .navbar{

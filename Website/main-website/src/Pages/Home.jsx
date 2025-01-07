@@ -56,10 +56,10 @@ const Home = () => {
 
 
         <div className="who-we-are-main">
-            <div className="quick_section">
+        <div className="quick_section">
                 <div className="quick_section_card">
                     <div className="quick_section_card_1">
-                        <div className="quick_section_icon"></div>
+                        <img src={itTrainingCenter} height={95} width={110} alt=""/>
                         It Training Center
                     </div>
                     <div className="quick_section_card_2">
@@ -69,21 +69,21 @@ const Home = () => {
 
                 <div className="quick_section_card">
                     <div className="quick_section_card_1">
-                        <div className="quick_section_icon"></div>
-                        It Training Center
+                        <img src={mobileAppDevelopment} alt="" height={95} width={95}/>
+                        Mobile App Development
                     </div>
                     <div className="quick_section_card_2">
-                        Foundational training in programming languages and web design & development    
-                    </div>                    
+                    Mobile and cross-platform application development training for corporations and individuals
+                    </div>
                 </div>
                 <div className="quick_section_card">
                     <div className="quick_section_card_1">
-                        <div className="quick_section_icon"></div>
-                        It Training Center
+                        <img src={webDesignServices} height={95} width={95} alt="" />
+                        Web Design Services
                     </div>
                     <div className="quick_section_card_2">
-                        Foundational training in programming languages and web design & development    
-                    </div>                    
+                    Crafting responsive, user-friendly websites with modern web technologies
+                    </div>
                 </div>
             </div>
         <div className="sub1">
