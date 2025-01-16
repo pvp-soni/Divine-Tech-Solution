@@ -18,17 +18,18 @@ import Contact_us from './Pages/Contact_us';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-  <Routes>
-    <Route path="/" element={<Navbar/>}>
-      <Route path='/' element={<Home />}></Route>
-      <Route path='/training' element={<Training />}></Route>
-      <Route path='/services' element={<Services />}></Route>
-      <Route path='/consultancy' element={<Consultancy />}></Route>
-      <Route path='/about-us' element={<About_us />}></Route>
-      <Route path='/contact-us' element={<Contact_us />}></Route>
-    </Route>
-  </Routes>
-  </BrowserRouter>
+  // <BrowserRouter>
+  // <Routes>
+  //   <Route path="/" element={<Navbar/>}>
+  //     <Route path='/' element={<Home />}></Route>
+  //     <Route path='/training' element={<Training />}></Route>
+  //     <Route path='/services' element={<Services />}></Route>
+  //     <Route path='/consultancy' element={<Consultancy />}></Route>
+  //     <Route path='/about-us' element={<About_us />}></Route>
+  //     <Route path='/contact-us' element={<Contact_us />}></Route>
+  //   </Route>
+  // </Routes>
+  // </BrowserRouter>
+  <Contact_us/>
 );
 reportWebVitals();

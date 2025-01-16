@@ -29,9 +29,7 @@
     transition: 0.4s;
     
     
-}
-.logo_section{
-  
+
 
 }
 .links_section{
@@ -780,30 +778,50 @@ color: var(--C2);
 
 .header_section_main{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 30px 40px;
     background-color: var(--C2);
+    margin: 80px;
+    border-radius: 15px;
 }
-.header_section_main svg{
-    /* scale: 200%; */
-}
+
 .header_section_content{
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    align-items: center;
+    gap: 40px;
+    
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.sub_heading{
+  color: var(--c3);
+  font-size: 16px;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .header_section_heading{
     font-family: var(--FS-head);
     color: var(--c1);
-    font-size: 55px;
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .header_section_description{
     font-weight: 100;
     opacity: 0.7;
     text-align: justify;
     color: var(--c1);
+    font-size: 16px;
 }
 
 /* default heading section  */
@@ -834,7 +852,7 @@ color: var(--C2);
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 100px;
     gap: 20px;
     margin: 0px 0px 100px 0px;
 }
@@ -1385,3 +1403,286 @@ color: var(--C2);
     background-color: #555;
   }
     */
+
+
+
+
+    /* contact Us page  */
+    .contactUs_section1{
+      display: flex;
+      flex-direction: row;
+      gap: 41px;
+      padding: 88px 80px;
+      background-color: var(--c1);
+    }
+    .contact_content1{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      gap: 34px;
+    }
+
+    .contactUs{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .ContectUs_heading{
+      color: var(--C2);
+      font-family: var(--FS-head);
+      font-size: 34px;
+    }
+
+    .ContectUs_description{
+      font-size: 18px;
+      color: #37474F;
+    }
+
+
+
+
+    .contactUs_section2{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 41px;
+      padding: 88px 80px;
+      background-color: #E8E8E8;
+    }
+
+    .contact-page-form-123{
+      /* background-color: #2575fc; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      width: 100%;
+
+    }
+.contact-Name{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+  width: 630px;
+  height: 95px;
+}
+.contact-Email{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 630px;
+  height: 95px;
+
+}
+.contact-Message{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 630px;
+  
+}
+
+.contact-Name textarea{
+  height: 61px;
+  
+}
+.contact-Email textarea{
+  height: 61px;
+}
+
+
+/* additional services section of services page */
+.Additional_services_section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Additional_services_heading_section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 55px;
+
+}
+.Additional_services_heading{
+  font-family: var(--FS-head);
+  color: var(--C2);
+  font-size: 52px;
+}
+.Additional_services_discription{
+  color: #37474F;
+  font-size: 18px;
+}
+.Additional_Services_card_section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+.Additional_Services_card_image{
+  height: 302px;
+  width: 302px;
+  border-radius: 10px;
+  background-image: url('../assets/digital_marketing.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 140%;
+  transition: 0.3s;
+}
+.Additional_Services_card{
+  background-color: #ffe9c8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 30px;
+  border-radius: 10px;
+  /* border: solid var(--C2); */
+}
+
+
+.Additional_Services_card_details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--C2);
+  gap: 8px;
+  border-radius: 10px;
+  /* position: absolute; */
+}
+
+
+.Additional_Services_name{
+font-family: var(--FS-head);
+font-size: 18px;
+
+}
+.Additional_services_discription{
+  font-size: 14px;
+  
+}
+
+.big_div{
+  padding: 142px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #ff758c; */
+}
+
+.big_div:hover{
+  /* background-color: #FFF8D1; */
+  padding: 0px;
+  transition: 0.3s;
+  border-radius: 10px;
+  color: #FFF8D1;
+  
+}
+.big_div:hover .Additional_Services_card{
+  
+ transition: 0.3s;
+ background-color: #FFF8D1;
+ /* color: #FFF8D1; */
+ padding: 162px;
+ border-radius: 10px;
+ 
+}
+/* .big_div:hover .Additional_Services_card_details{
+  color: var(--c1);
+  transition: 0.3s;
+} */
+
+.big_div:hover .Additional_Services_card_image{
+  background-size: 100%;
+  
+}
+
+/* services page 2  */
+
+
+.service_card{
+  display: flex;
+  /* width: 100%; */
+  padding: 70px 40px;
+  /* background-color: #0d888a; */
+  gap: 40px;
+  transition: 0.4s;
+}
+.service_card:hover{
+  background-color:#C8A2C8;
+  transition: 0.3s;
+ 
+}
+.service_card:hover .service_card_details{
+  background-color:#C8A2C8;
+  transition: 0.3s;
+}
+.service_img_and_name{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30%;
+  gap: 20px;
+}
+.service_img{
+  height: 300px;
+  width: 330px;
+  background-image: url("../assets/stars.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+.service_name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 7px;
+}
+.service_name_heading{
+  font-family: var(--FS-head);
+  color: var(--c3);
+  font-size: 26px;
+}
+.service_name_description{
+  font-weight: 100;
+}
+.service_card_details{
+  background-color: #E7E7E7;
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 40px;
+  transition: 0.4s;
+}
+/* .service_card_animation_div{
+  background-color: red;
+  height: 100%;
+  width: 200px;
+  position: absolute;
+  float: right;
+  right: 40px;
+
+} */
+/* .service_card:hover{
+  background-color: var(--c1);
+}
+.service_card:hover .service_card_details{
+  border-radius: 0px;
+  background-color: var(--c1);
+} */
+
