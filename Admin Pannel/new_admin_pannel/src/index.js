@@ -30,7 +30,7 @@ root.render(
       <Route path='/faqs' element={<Faqs />} />
       <Route path='/about-us' element={<About_us />} />
       <Route path='/app' element={<App />} />
-      <Route path='/courses/:id' element={<CourseCategoryEdit />} />
+      <Route path='/courses/:_id' element={<CourseCategoryEdit />} />
     </Route>
   </Routes>
   </BrowserRouter>

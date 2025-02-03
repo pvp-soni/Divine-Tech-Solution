@@ -1,22 +1,26 @@
-const express = require('express')
-const mongoose = require('mongoose')
-const cors = require('cors')
-const CourseCategoryModel = require('./models/CourseCategory')
+import express,{json} from "express"
+import mongoose from 'mongoose';
 
-const app = express()
-app.use(cors())
-app.use(express.json())
+const app = express();
+app.use(express.json());
 
-mongoose.connect("mongodb+srv://aayushhirpara60:Aayush25@training.njovn.mongodb.net/DivineTechSoutions")
+const Dburl = "mongodb+srv://aayushhirpara60:Aayush25@training.njovn.mongodb.net/";
+const connectionString = mongoose.connect(Dburl, { useNewUrlParser: true, useUnifiedTopology: true });
 
-app.get('/getCourseCategory', (req, res) => {
-    CourseCategoryModel.find()
-    .then(item => res.json(item))
-    .catch(err => res.json(err))
-    res.send(CourseCategoryModel.find().then((item)=> res.json(item)))
+// Schema 
+
+const CourseCategorySchema = mongoose.Schema({
+    Image: String,
+    Description: String,
+    CategoryID: String,
+    CategoryName: String,
+    Topics: Array
 })
 
-app.listen(3001, () => {
-    console.log('Server is running');
-    
-})
+// Models 
+
+const CourseCategoryModel = mongoose.model('CourseCategoryModel',CourseCategorySchema,'CourseCategory');
+
+CourseCategoryModel.
+
+console.log('success', data);

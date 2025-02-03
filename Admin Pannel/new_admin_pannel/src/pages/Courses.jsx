@@ -1,13 +1,36 @@
 import React from 'react'
 import './styles.css'
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 
 const Courses = () => {
   const navigate = useNavigate();
   const [addCategoryModal, setAddCategoryModal] = useState(false);
   const [addCourseModal, setAddCourseModal] = useState(false);
+  const [data, setData] = useState([]);
+  
+  useEffect(async ()=>{
+    try {
+          const response = await axios.get('http://localhost:8888/course-category');
+          setData(response.data);
+          console.log(data);
+        } catch (error) {
+          console.log(error);
+        }
+  },[]);
+
+  // const fetchData = async ()=>{
+  //   try {
+  //     const response = await axios.get('http://localhost:8888/course-category');
+  //     setData(response.data);
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+
   const toggleAddCategoryModal = () => {
     setAddCategoryModal(!addCategoryModal);
   }
@@ -212,20 +235,20 @@ const Courses = () => {
 
     {/* short-term courses */}
     {
-      coursesCategories.map((item, index)=>{
+      data.map((item, index)=>{
         return (
           <>
           <div className='course-head-div'>
-            {item.name}
+            {item.CategoryName}
           <div>
           <button className='add-btn'> Add Course </button>
-          <button className='edit-btn' onClick={()=>{editCategoryPage(item.id)}}> Edit Category </button>
+          <button className='edit-btn' onClick={()=>{editCategoryPage(item._id)}}> Edit Category </button>
           <button className='delete-btn'> Delete Category </button>
           </div>
           </div>
           <div className='course_body'>
             {
-              item.items.map((content, index)=>{
+              item.Topics.map((content, index)=>{
                 return(
                   <div className='inside_content_card'>{content}<div><div>{delete_svg}</div><div>{edit_svg}</div></div></div>
                 )
