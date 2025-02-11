@@ -9,16 +9,22 @@ const Courses = () => {
   const navigate = useNavigate();
   const [addCategoryModal, setAddCategoryModal] = useState(false);
   const [addCourseModal, setAddCourseModal] = useState(false);
+  const [newCategoryName, setNewCategoryName] = useState("");
+  const [newCategoryDes, setNewCategoryDes] = useState("");
   const [data, setData] = useState([]);
+
+  const getCategory = async () => {
+    try {
+      const response = await axios.get('http://localhost:8888/course-category');
+      setData(response.data);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   
   useEffect(async ()=>{
-    try {
-          const response = await axios.get('http://localhost:8888/course-category');
-          setData(response.data);
-          console.log(data);
-        } catch (error) {
-          console.log(error);
-        }
+    getCategory();
   },[]);
 
   // const fetchData = async ()=>{
@@ -31,8 +37,25 @@ const Courses = () => {
   //   }
   // }
 
+  
   const toggleAddCategoryModal = () => {
     setAddCategoryModal(!addCategoryModal);
+  }
+
+  const addNewCourseCategory = async () => {
+    console.log(newCategoryName,newCategoryDes)
+    try {
+      await axios.post('http://localhost:8888/add-course-category', {
+        newCategoryName,
+        newCategoryDes
+      });
+      await getCategory();
+      toggleAddCategoryModal();
+      console.log('sasasasaasasa');
+    } catch (error) {
+      console.log(error);
+    }
+    // getCategory();
   }
   const toggleAddCourseModal = () => {
     setAddCourseModal(!addCourseModal);
@@ -175,18 +198,18 @@ const Courses = () => {
           <form action="" method="get" className='modal-form'>
             <div>
             <label htmlFor="">Course Category Name</label>
-            <input type='text' name="" id="" className='input-field' required/>
+            <input type='text' name="" id="" className='input-field' autoFocus required onInput={e => setNewCategoryName(e.target.value)}/>
             </div>
             <div>
             <label htmlFor="">Course Category Discription</label>
-            <input type="text" name="" id="" className='input-field' required/>
+            <input type="text" name="" id="" className='input-field' required onInput={e => setNewCategoryDes(e.target.value)}/>
             </div>
             <div>
             <label htmlFor="course-image" className='add-btn'>Upload Image*</label>
-            <input type="file" name="course-image" id="course-image" accept='image/*' required/>
+            <input type="file" name="course-image" id="course-image" accept='image/*'/>
             </div>
             <div className="div">
-              <input type="submit" value="Add" className='edit-btn'/>
+              <input type="button" value="Add" className='edit-btn' onClick={addNewCourseCategory}/>
               <input type="reset" value="Clear" className='delete-btn' />
             </div>
           </form>
